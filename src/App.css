@@ -1,38 +1,76 @@
-.App {
+#root {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.taskList {
+  list-style: none;
+  padding: 0px;
+  min-width: 321px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.read-the-docs {
+  color: #888;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.done {
+  text-decoration: line-through;
+}
+
+.footer {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column
+}
+
+input {
+  margin: 10px;
+  font-size: 25px;
+}
+
+.btn-done:active {
+  background-color: #ccc;
+  color: #000;
+}
+
+.btn-done:hover {
+  cursor: pointer;
+}
+
+.btn-delete:active {
+  background-color: lightcoral;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.tab {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.tab.active {
+  background-color: #007bff;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border-color: #007bff;
 }
